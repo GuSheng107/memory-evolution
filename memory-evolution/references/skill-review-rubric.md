@@ -27,10 +27,17 @@ Enter deep review when any of these are true:
 
 Choose this when the mismatch is rare or task-specific.
 
-### Patch The Skill
+### Ask Whether To Patch The Skill
 
-Choose this when the skill content is incomplete, stale, or clearly wrong.
+Choose this when the skill content is incomplete, stale, or clearly wrong, and the defect is actionable.
+
+When this outcome applies:
+
+- ask the user directly whether they want the skill modified
+- if the user agrees, output a concise modification outline
+- the outline should name the target skill, the defect, the planned logic change, and the validation steps
+- do not silently edit the skill during passive review unless the user explicitly asks for implementation in the current turn
 
 ### Record A Temporary Correction
 
-Choose this when it is too early to rewrite the skill. Record a short-term note in `corrections.md` and re-evaluate after another occurrence.
+Choose this when it is too early to rewrite the skill, or when the user declines to modify the skill. Record a short-term note in `corrections.md` and re-evaluate after another occurrence.
