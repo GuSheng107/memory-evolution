@@ -59,6 +59,12 @@ Use this for:
 - repeated manual recovery because a skill is incomplete
 - inaccurate trigger text that causes misses or false positives
 
+When the reviewed skill issue is actionable:
+
+- ask the user whether they want the skill modified
+- if the user agrees, output a modification outline instead of silently patching the skill
+- if the user declines, write a temporary correction to `corrections.md`
+
 ### Compress Memory
 
 Use this for:
